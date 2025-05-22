@@ -1,0 +1,9 @@
+{# templates/weather/show.html.twig #}
+<h1>Погода в {{ weather.city }}, {{ weather.country }}</h1>
+<ul>
+    <li>Температура: {{ weather.temperature }}°C</li>
+    <li>Стан: {{ weather.condition }}</li>
+    <li>Вологість: {{ weather.humidity }}%</li>
+    <li>Швидкість вітру: {{ weather.wind_speed }} км/год</li>
+    <li>Останнє оновлення: {{ weather.last_updated }}</li>
+</ul>
