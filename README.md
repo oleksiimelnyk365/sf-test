@@ -28,30 +28,24 @@ https://github.com/dunglas/symfony-docker
 
 ## ⚙️ Встановлення
 
+Як уже було сказано вище - використанео докер скелетон https://github.com/dunglas/symfony-docker - процес установкеи описаний там
+
+в цілому можна зробити ось так:
+
+1. Створи .env.local
+2. Відреедагуй змінні за необхідності (HTTP_PORT і т.д) 
+3. Встанови змінну WEATHER_API_KEY (тестовий ключ cdd3c97cda9045dba03100717251806). Отримати новий ключ тут: https://www.weatherapi.com/my/
+4. Виконай команди докер:
 ```bash
-git clone <репозиторій>
-cd project-directory
-composer install
+docker compose build --pull --no-cache to build fresh images
+docker compose up --wait to set up and start a fresh Symfony project
 ```
+5.Відкрий  https://localhost{HTTPS_PORT}
 
-## 🔐 Секрети
+Наприклад: https://localhost:4433/weather/Lviv
 
-Створи файл `.env.local` і додай API-ключ:
+Готово! 
 
-```
-WEATHER_API_KEY=your_weatherapi_key_here
-```
-
-## 🚀 Запуск
-
-```bash
-symfony server:start
-```
-
-Відкрий у браузері:
-```
-http://localhost:8000/weather/Lviv
-```
 
 ## ✅ Тестування
 
